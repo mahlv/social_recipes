@@ -1,13 +1,13 @@
 <%= simple_form_for @recipe do |f| %>
-  <%= f.input :name, label: 'Nome' %>
-  <%= f.input :cuisine, label: 'Cozinhas' %>
-  <%= f.input :food_type, label: 'Tipo de comida' %>
-  <%= f.input :preferences, label: 'Preferências de comida' %>
+  <%= f.input :name, label: 'Nome', error: 'Nome é obrigatório' %>
+  <%= f.input :cuisine, label: 'Cozinhas', error: 'Cozinha é obrigatório' %>
+  <%= f.input :food_type, label: 'Tipo de comida', error: 'Tipo é obrigatório' %>
+  <%= f.input :preferences, label: 'Preferências de comida', error: 'Preferências é obrigatório'%>
   <%= f.input :portions, label: 'Porções' %>
-  <%= f.input :time, label: 'Tempo de preparo' %>
+  <%= f.input :time, label: 'Tempo de preparo'%>
   <%= f.input :difficulty, collection: ['Fácil','Médio','Difícil'], as: :radio_buttons %>
-  <%= f.input :ingredients, label: 'Ingredientes' %>
-  <%= f.input :instructions, label: 'Passo a Passo' %>
+  <%= f.input :ingredients, label: 'Ingredientes', error: 'Ingredientes é obrigatório' %>
+  <%= f.input :instructions, label: 'Passo a Passo', error: 'Passo a Passo é obrigatório' %>
 
   <%= f.submit 'Criar receita' %>
 <% end %>
